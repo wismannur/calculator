@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator || Wisman</title>
+
+  <style type="text/css">
+    body {
+      background-color: #38D2FF;
+    }
+
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      border:3px black solid;
+      padding: 10px;
+      text-align: center;
+      width: 300px;
+      background-color: #35BCFF;
+
+    }
+    .row {
+      margin: auto;
+      margin-bottom: 5px;
+    }
+    .num{
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      margin: auto;
+      border-radius: 50px;
+    }
+    #view {
+      width: 298px;
+      height: 100px;
+      text-align: center;
+      border:1px black solid;
+      margin-bottom: 10px;
+    }
+    .num:hover{
+      background-color: blue;
+      color: white;
+      font-size: 20pt;
+    }
+
+  </style>
+</head>
+<body>
+	<script>
+    function number(value){
+        document.form1.result.value +=value;
+    }
+    function cle(value){
+        document.form1.result.value =value;
+    }
+    function evalua(){
+        //var evalu = eval(document.form1.result.value);
+        document.form1.result.value = eval(document.form1.result.value);
+    }
+    </script>
+	  <div class="container">
+	    <h1>Program Calculator Sederhana</h1>
+    <form name="form1">
+	    <div class="row">
+	      	<div class="view"><input id="view" class="view" type = "text" name="result" placeholder="0" disabled style="text-align: right; font-size: 25pt;"></input></div>
+	      	<button id="reset" onclick="cle(value)" class="num">C</button>
+	    </div>
+	    <div class="row">
+	      <button type = "button" onclick="number(value)" class="num" value="7">7</button>
+	      <button type = "button" onclick="number(value)" class="num" value="8">8</button>
+	      <button type = "button" onclick="number(value)" class="num" value="9">9</button>
+	      <button type = "button" onclick="number(value)" class="num" value="+">+</button>
+	    </div>
+	    <div class="row">
+	      <button type = "button" onclick="number(value)" class="num" value="4">4</button>
+	      <button type = "button" onclick="number(value)" class="num" value="5">5</button>
+	      <button type = "button" onclick="number(value)" class="num" value="6">6</button>
+	      <button type = "button" onclick="number(value)" class="num" value="-">-</button>
+	    </div>
+	    <div class="row">
+	      <button type = "button" onclick="number(value)" class="num" value="1">1</button>
+	      <button type = "button" onclick="number(value)" class="num" value="2">2</button>
+	      <button type = "button" onclick="number(value)" class="num" value="3">3</button>
+	      <button type = "button" onclick="number(value)" class="num" value="*">x</button>
+	    </div>
+	    <div class="row">
+	      <button type = "button" onclick="number(value)" class="num" value=".">.</button>
+	      <button type = "button" onclick="number(value)" class="num" value="0">0</button>
+	      <button type = "button" onclick="evalua()" class="num" >=</button>
+	      <button type = "button" onclick="number(value)" class="num" value="/">/</button>
+	    </div>
+	</form>
+	  </div>
+
+</body>
+</html>
